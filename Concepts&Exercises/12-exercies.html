@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title class="page-title">App</title>
+  </head>
+  <body>
+    <button class="js-exercise12c-button" onclick="
+      changeButton();
+    ">Yes</button>
+
+    <button class="js-exercise12e-html" onclick="
+      displayMessage();
+    ">Add to cart</button>
+    <p class="js-added-to-cart-message"></p>
+
+    <button class="js-add-message-button" onclick="
+      messages += 1;
+      displayNotification();
+    ">Add a message</button>
+    <button class="js-remove-message-button" onclick="
+      if (messages > 0) {
+        messages--;
+      if (messages === 0) {
+        stopNotification();
+        }
+      }
+    ">Remove a message</button>
+    
+    <script>
+      /*
+      const add = function() {
+        console.log(2 + 3);
+      }
+
+      function runTwice(fun) {
+        fun();
+        fun();
+      }
+      runTwice(add);
+
+      function changeButton() {
+        const buttonElement = document.querySelector('.js-exercise12c-button');
+        const state = buttonElement.innerHTML;
+        buttonElement.innerHTML = 'Loading...';
+        setTimeout(function() {
+          if (state === 'No') {
+          buttonElement.innerHTML = 'Yes';
+        } else {
+          buttonElement.innerHTML = 'No';
+        }
+        }, 1000);
+      }
+
+      let timeoutId;
+      function displayMessage() {
+        clearTimeout(timeoutId);
+
+        const textElement = document.querySelector('.js-added-to-cart-message');
+        textElement.innerHTML = 'Added to cart';
+        timeoutId = setTimeout(function() {
+          textElement.innerHTML = '';
+        }, 2000)
+      }
+
+      let messages = 2;
+      let intervalId;
+      let isDisplayingNotification;
+      displayNotification();
+
+      function displayNotification() {
+        if (isDisplayingNotification) {
+          return;
+        }
+
+        isDisplayingNotification = true;
+
+        intervalId = setInterval(function() {
+          if (document.title === 'App') {
+            document.title = `(${messages}) New messages`;
+          } else {
+            document.title = 'App';
+          }
+        }, 1000);
+      }
+
+      function stopNotification() {
+        isDisplayingNotification = false;
+
+        clearInterval(intervalId);
+        document.title = 'App';
+      }
+      */
+
+      const multiply = (num1, num2) => num1 * num2;
+      console.log(multiply(2, 3));
+
+      const countPositive = (nums) => {
+        let ans = 0; 
+        nums.forEach((value) => {
+          if (value > 0) {
+            ans += 1; 
+          }
+        });
+        return ans;
+      };
+      console.log(countPositive([1, -2, 5])); 
+
+      const addNum = (array, num) => {
+        return array.map(value => value + num);
+      };
+      console.log(addNum([1, 2, 3], -2));
+
+      const removeElement = (array, element) => {
+        return array.filter(value => value != element);
+      }
+      console.log(removeElement(['poop', 'egg', 'salt'], 'egg'));
+    </script>
+  </body>
+</html>

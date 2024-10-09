@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <div class="output-bar-wrap">
+      <p class="output-bar"></p>
+    </div>
+    
+    <script>
+      let calculation = localStorage.getItem('calculation') || '';
+      document.querySelector('.output-bar').innerHTML = `${calculation}`;
+    </script>
+
+    <div class="button-row">
+      <button class="button" onclick="
+      calculation += '1'; 
+      document.querySelector('.output-bar').innerHTML += '1';
+      localStorage.setItem('calculation', calculation);
+    "><p>1</p></button>
+    <button class="button" onclick="
+      calculation += '2'; 
+      document.querySelector('.output-bar').innerHTML += '2';
+      localStorage.setItem('calculation', calculation);
+    "><p>2</p></button>
+    <button class="button" onclick="
+      calculation += '3'; 
+      document.querySelector('.output-bar').innerHTML += '3';
+      localStorage.setItem('calculation', calculation);
+    "><p>3</p></button>
+    <button class="button operation" onclick="
+      calculation += ' + '; 
+      document.querySelector('.output-bar').innerHTML += ' + ';
+      localStorage.setItem('calculation', calculation);
+    "><p>+</p></button>
+    </div>
+
+    <div class="button-row">
+      <button class="button" onclick="
+      calculation += '4'; 
+      document.querySelector('.output-bar').innerHTML += '4';
+      localStorage.setItem('calculation', calculation);
+    "><p>4</p></button>
+    <button class="button" onclick="
+      calculation += '5'; 
+      document.querySelector('.output-bar').innerHTML += '5';
+      localStorage.setItem('calculation', calculation);
+    "><p>5</p></button>
+    <button class="button" onclick="
+      calculation += '6'; 
+      document.querySelector('.output-bar').innerHTML += '6';
+      localStorage.setItem('calculation', calculation);
+    "><p>6</p></button>
+    <button class="button operation" onclick="
+      calculation += ' - '; 
+      document.querySelector('.output-bar').innerHTML += ' - ';
+      localStorage.setItem('calculation', calculation);
+    "><p>-</p></button>
+    </div>
+
+    <div class="button-row">
+      <button class="button" onclick="
+      calculation += '7'; 
+      document.querySelector('.output-bar').innerHTML += '7';
+      localStorage.setItem('calculation', calculation);
+    "><p>7</p></button>
+    <button class="button" onclick="
+      calculation += '8'; 
+      document.querySelector('.output-bar').innerHTML += '8';
+      localStorage.setItem('calculation', calculation);
+    "><p>8</p></button>
+    <button class="button" onclick="
+      calculation += '9'; 
+      document.querySelector('.output-bar').innerHTML += '9';
+      localStorage.setItem('calculation', calculation);
+    "><p>9</p></button>
+    <button class="button operation" onclick="
+      calculation += ' * '; 
+      document.querySelector('.output-bar').innerHTML += ' * ';
+      localStorage.setItem('calculation', calculation);
+    "><p>*</p></button>
+    </div>
+
+    <div class="button-row">
+      <button class="button" onclick="
+      calculation += '0'; 
+      document.querySelector('.output-bar').innerHTML += '0';
+      localStorage.setItem('calculation', calculation);
+    "><p>0</p></button>
+    <button class="button" onclick="
+      calculation += '.'; 
+      document.querySelector('.output-bar').innerHTML += '.';
+      localStorage.setItem('calculation', calculation);
+    "><p>.</p></button>
+    <button class="button" onclick="
+      calculation = eval(calculation);
+      localStorage.setItem('calculation', calculation);
+      document.querySelector('.output-bar').innerHTML = calculation;
+    "><p>=</p></button>
+    <button class="button operation" onclick="
+      calculation += ' / '; 
+      document.querySelector('.output-bar').innerHTML += ' / ';
+      localStorage.setItem('calculation', calculation);
+    "><p>/</p></button>
+
+    </div>
+    
+    <div class="button-row">
+      <button class="button" onclick="
+        calculation = '';
+        localStorage.setItem('calculation', calculation);
+        document.querySelector('.output-bar').innerHTML = '';
+      "><p class="clear-text">Clear</p></button>
+    </div>
+    
+  </body>
+</html>

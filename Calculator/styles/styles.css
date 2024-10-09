@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+}
+
+p {
+    color: white;
+    font-size: 24px;
+    font-family: Arial;
+}
+
+.output-bar-wrap {
+    margin-left: 15px;
+    border-bottom: solid 1px;
+    display: flex;
+    align-items: bottom;
+}
+
+.output-bar {
+    font-size: 36px;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.button-row {
+    display: flex;
+    padding: 5px 10px 5px 10px;
+}
+
+.button {
+    margin: 0 5px 0 5px;
+    font-size: 18px;
+    height: 60px;
+    width: 60px;
+    background-color: rgb(50, 49, 49);
+    color: white;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button.operation {
+    background-color: orange;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:active {
+    opacity: 0.6;
+}
+
+.clear-text {
+    font-size: 18px;
+}

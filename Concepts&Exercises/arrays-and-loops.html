@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+  </head>
+  <bofy>
+    <script>
+      /*
+      const myArray = [1, 'hello', true, {key: 'value'}, [1, 2]];
+      console.log(myArray);
+      console.log(myArray[3]);
+      console.log(myArray.length);
+      myArray.push(100);
+      myArray.splice(0, 2); // (index, num-value-to-remove)
+      console.log(myArray);
+
+      let i = 1;
+      while (i <= 5) {
+        console.log(i);
+        i += 1;
+      }
+
+      for (let i = 1; i <= 11; i += 2) {
+        console.log(i);
+      }
+
+      let randomNumber = 0;
+
+      while (randomNumber < 0.5) {
+        randomNumber = Math.random();
+        console.log(randomNumber);
+      }
+      */
+
+      /*
+      function minMax(nums) {
+        if (nums.length === 0) {
+          return { min: null, max: null };
+        }
+
+        let min = nums[0];
+        let max = nums[0];
+
+        for (let i = 1; i < nums.length; i++) {
+          min = (min > nums[i]) ? nums[i] : min;
+          max = (max < nums[i]) ? nums[i] : max;
+        }
+
+        return { min: min, max: max };
+      }
+
+      function countWords(words) {
+        let wordsCount = {};
+        for (let i = 0; i < words.length; i++) {
+          word = words[i];
+          if (wordsCount[word]) {
+            wordsCount[word] += 1;
+          } else {
+            wordsCount[word] = 1;
+          }
+        }
+
+        return wordsCount;
+      }
+
+      console.log(countWords(['a', 'b', 'a']));
+      */
+
+      /*
+      for (let i = 1; i <= 10; i++) {
+        if (i % 3 === 0) {
+          continue;
+        }
+        if (i === 8) {
+          break;
+        }
+        console.log(i);
+      }
+
+      let i = 1;
+
+      while (i <= 10) {
+        if (i % 3 === 0) {
+          i ++;
+          continue;
+        }
+        console.log(i);
+        i ++;
+      }
+      */
+
+      function FizzBuzz(num) {
+        for (let i = 1; i <= num; i++) {
+          if (i % 3 === 0 && i % 5 === 0) {
+            console.log('FizzBuzz');
+          } else if (i % 3 === 0) {
+            console.log('Fizz');
+          } else if (i % 5 === 0) {
+            console.log('Buzz')
+          } else {
+            console.log(i)
+          }
+        }
+      }
+
+      FizzBuzz(20);
+    </script>
+  </bofy>
+</html>

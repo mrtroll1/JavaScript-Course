@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+
+    <button onclick="
+      console.log(`Cart Quantity: ${quantity}`)
+    ">Show Quantity</button>
+    <button onclick="
+      if (quantity + 1 <= 10) {
+        quantity += 1;
+        console.log(`Cart Quantity: ${quantity}`)
+      } else {
+        console.log('Your cart is full')
+      }
+    ">Add to Cart</button>
+    <button onclick="
+      if (quantity + 2 <= 10) {
+        quantity += 2;
+        console.log(`Cart Quantity: ${quantity}`)
+      } else {
+        console.log('Your cart is full')
+      }
+    ">+2</button>
+    <button onclick="
+      if (quantity + 3 <= 10) {
+        quantity += 3;
+        console.log(`Cart Quantity: ${quantity}`)
+      } else {
+        console.log('Your cart is full')
+      }
+    ">+3</button>
+    <button onclick="
+      if (quantity - 2 >= 0) {
+        quantity -= 2;
+        console.log(`Cart Quantity: ${quantity}`)
+      } else {
+        console.log('You do nott have enough items')
+      }
+    ">-2</button>
+    <button onclick="
+      if (quantity - 3 >= 0) {
+        quantity -= 3;
+        console.log(`Cart Quantity: ${quantity}`)
+      } else {
+        console.log('You do not have enough items')
+      }
+    ">-3</button>
+      <button onclick="
+        quantity = 0;
+        console.log('Cart was reset.')
+        console.log(`Cart Quantity: ${quantity}`)
+      ">Reset Cart</button>
+
+    <script>
+      let quantity = 0;
+      const coeff = 3; // create a constant 
+      var variable3 = '...'; // better to use 'let'
+      console.log(typeof quantity)
+    </script>
+  </body>
+</html>

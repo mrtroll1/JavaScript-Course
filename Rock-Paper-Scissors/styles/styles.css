@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(25, 25, 25);
+    font-family: Arial;
+    color: white;
+}
+
+.game-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.move-button {
+    background-color: rgb(25, 25, 25);
+    border-radius: 100%;
+    border: solid 3px white;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.move-button:hover {
+    background-color: rgb(37, 37, 37);
+}
+
+.move-button.is-toggled {
+    background-color: rgb(167, 119, 212);
+}
+
+.button-icon {
+    height: 50px;
+    padding: 30px 25px 30px 25px;
+}
+
+.result {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.result-icon {
+    height: 50px;
+}
+
+.reset-button, 
+.autoplay-button, 
+.no-reset-button, 
+.yes-reset-button {
+    border: none;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    transition: padding 0.15s;
+}
+
+.reset-button:hover, 
+.autoplay-button:hover,
+.no-reset-button:hover, 
+.yes-reset-button:hover {
+    padding: 7px 12px 7px 12px;
+}
+
+.reset-button:active, 
+.autoplay-button:active,
+.no-reset-button:active, 
+.yes-reset-button:active {
+    opacity: 0.8
+}

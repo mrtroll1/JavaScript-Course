@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: 'socks',
+        price: 10.90
+      };
+
+      console.log(typeof product);
+      console.log(product.name);
+      console.log(product['price']);
+
+      product.name = 'cotton socks';
+      console.log(product); /* console is an object, 
+            and log is a function stored in this object.
+            such thing is called a method.*/
+      product.newProperty = true;
+      console.log(product);
+
+      delete product.newProperty;
+      console.log(product);
+
+      jsonData = JSON.stringify(product);
+      console.log(jsonData);
+      console.log(JSON.parse(jsonData)); 
+
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+      // objects are references (to computer's memeory)
+
+      const object1 = {
+        message: 'hello'
+      }
+      const object2 = object1;
+
+      object1.message = 'hi';
+      console.log(object2); /* it is updated, 
+      tho object2 was never changed directly */
+
+      // const message = object2.message;
+      const {message} = object2;
+    </script>
+  </body>
+</html>

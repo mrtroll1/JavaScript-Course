@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+
+      const age = 19;
+
+      if (age > 18) {
+        console.log('You can drink any alchohol.');
+        console.log('Congrats!')
+      } else if (age >= 16) {
+        console.log('You can drink beer and wine.');
+      } else {
+        console.log('You can not drink alchohol:()');
+      }
+
+      if (5) {
+        console.log('truthy');
+      }
+
+      if ('lol') {
+        console.log('truthy');
+      }
+
+      console.log(5 / 'e');
+
+      let variable;
+      console.log(variable);
+
+      const res1 = true ? 'truthy' : 'falsy'; 
+      console.log(res1)
+
+      const res2 = false ? 'truthy' : 'falsy'; 
+      console.log(res2)
+
+      false && console.log('hello');
+
+      5 && console.log('hello')
+
+      const currency = undefined || 'usd';
+      console.log(currency);
+
+    </script>
+  </body>
+</html>
